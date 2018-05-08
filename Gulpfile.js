@@ -78,7 +78,7 @@ gulp.task('js', function () {
 
 gulp.task('default', ['js', 'sass']);
 
-gulp.task('w', function () {
+gulp.task('watch', function () {
     gulp.watch(jsSrc, ['js']);
     gulp.watch(scssSrc, ['sass']);
 });

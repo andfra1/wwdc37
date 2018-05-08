@@ -1,8 +1,35 @@
 header {
   margin-top: 34px;
-  .content {
-  background-color: black;
-  font-size: 2rem;
-  height: 40px;
+  position: fixed;
+  width: 100%;
+  background-color: red;
+  z-index: 666;
+  .wrapper {
+    max-width: 1200px;
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(black,0.5);
+      font-size: 2rem;
+      height: 40px;
+    }
+  }
 }
+
+.logo {
+  color: $light;
+  font-family: Lato;
+  font-size: 4.3rem;
+  font-weight: 900;
+  letter-spacing: -0.47px;
+}
+
+.menu {
+  &__item {
+    padding: 10px 5px;
+    &Link {
+      @include linkAsBlock;
+    }
+  }
 }

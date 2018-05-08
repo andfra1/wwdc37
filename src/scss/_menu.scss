@@ -5,8 +5,32 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.24px;
+  position: relative;
+  margin: 0 0 0 auto;
   &__item {
     display: inline-block;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: calc(100% - 2px);
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 50%;
+      height: 0;
+      background-color: $light;
+      opacity: 0;
+      transition: all 0.8s;
+    }
+    &:hover {
+      &:before {
+        height: 2px;
+        width: 100%;
+        opacity: 1;
+        transition: all 0.3s;
+      }
+    }
     &Link {
       @include linkAsBlock;
     }

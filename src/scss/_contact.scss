@@ -1,0 +1,44 @@
+.contact {
+  font-size: 0;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  &__item {
+    padding-left: 54px;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    &Icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 54px;
+      display: block;
+      > svg {
+
+      }
+    }
+    &Name,
+    &Data {
+      display: block;
+      width: 100%;
+      font-family: 'open_sans';
+    }
+    &Name {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+    &Data {
+      font-size: 17px;
+      a, span {
+        display: block;
+      }
+    }
+  }
+}

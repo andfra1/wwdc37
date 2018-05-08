@@ -1,6 +1,5 @@
-.intro {
+.section--firstBg {
   @include bgImg;
   background-image: url('../../img/bg.png');
-  position: absolute;
-  height: 100%;
+  height: 100vh;
 }

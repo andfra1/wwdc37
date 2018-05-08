@@ -1,13 +1,19 @@
 main {
+  font-size: 1rem;
 }
 
-section {
+.section {
   position: relative;
+  padding: 90px 0;
+  &:last-of-type {
+    padding-bottom: 50px;
+  }
 }
 
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 h1,
@@ -22,6 +28,7 @@ h6 {
 
 h1 {
   font-size: 6.2rem;
+  margin-bottom: 80px;
 }
 
 h2 {

@@ -2,12 +2,16 @@
 @import 'static/fonts';
 @import 'static/vars';
 @import 'static/mixins';
-@import 'static/globals';
-@import 'static/rwd';
 
 @import 'header';
 @import 'menu';
 
 @import 'button';
 
-@import 'intro';
+@import 'sections';
+@import 'section6';
+
+@import 'contact';
+
+@import 'static/globals';
+@import 'static/rwd';
