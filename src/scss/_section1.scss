@@ -1,0 +1,42 @@
+.content.category1 {
+  font-size: 0;
+  // display: flex;
+  // justify-content: space-between;
+  // align-content: center;
+  &:before {
+    @include pseudoAbsolute;
+    width: 1000px;
+    height: 1000px;
+    background-color: $darken2;
+    transform: rotate(45deg);
+    top: -590px;
+    left: 43%;
+  }
+  .content {
+    &__item {
+      position: relative;
+      font-size: 0;
+      display: inline-block;
+      &:first-of-type {
+        max-width: 450px;
+        vertical-align: top;
+      }
+      &:last-of-type {
+        // display: flex;
+        // align-content: center;
+        // justify-content: center;
+        max-width: 750px;
+        vertical-align: bottom;
+      }
+      &>.btn {
+        margin-top: 80px;
+      }
+      &Image.imageSection1 {
+        width: 757px;
+        max-width: 100%;
+        height: auto;
+        margin-top: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.content.category2 {
+  h1 {
+    text-align: center;
+  }
+  .box {
+    justify-content: space-between;
+    margin: -70px 0;
+    &__item {
+      padding-left: 64px;
+      margin: 80px 0;
+      width: 30%;
+      min-width: 300px;
+      &Icon {
+        top: -8px;
+        left: 0;
+        height: 54px;
+        width: 54px;
+        border-radius: 50%;
+        background-color: $warn;
+      }
+      &Name {
+        font-size: 30px;
+        color: $darkenLight;
+      }
+    }
+  }
+}

@@ -12,7 +12,8 @@
 
 <?php
 /*content here!*/
-$data = [
+$data = 
+[
   'menu' => [
     'HOME',
     'ABOUT US',
@@ -24,13 +25,39 @@ $data = [
   ],
   'header' => [
     'section1' => 'Who we are',
-    'section2' => 'Wat we do',
+    'section2' => 'What we do',
     'section3' => 'How we works',
     'section4' => 'Our creative team',
     'section5' => 'What client says',
     'section6' => 'Get in touch',
   ],
   'button' => 'read more',
+  'whatwedo' => [
+    'Creative Work' => [
+      'icon' => 'svg',
+      'data' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+    ],
+    'We do Best' => [
+      'icon' => 'svg',
+      'data' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+    ],
+    'Best Company' => [
+      'icon' => 'svg',
+      'data' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+    ],
+    'Nice Idea' => [
+      'icon' => 'svg',
+      'data' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+    ],
+    'Professional' => [
+      'icon' => 'svg',
+      'data' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+    ],
+    'Great Services' => [
+      'icon' => 'svg',
+      'data' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+    ]
+  ],
   'contact' => [
     'email' => [
       'icon' => 'svg',
@@ -53,14 +80,13 @@ $data = [
         '<span>My Country 123456</span>'
       ]
     ]
-
-
   ]
 ];
 
 $header = $data['header'];
 $menu = $data['menu'];
 $button = $data['button'];
+$box = $data['whatwedo'];
 $contact = $data['contact'];
 ?>
 
@@ -90,6 +116,11 @@ $contact = $data['contact'];
                       [search]
                     </a>
                   </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__itemLink">
+                      [fb]
+                    </a>
+                  </li>
             </ul>
           </nav>
         </div>
@@ -97,23 +128,18 @@ $contact = $data['contact'];
     </header>
     <main>
       <section class="section section--firstBg">
-        <div class="wrapper">
-          <div class="content">
             <div class="intro">
-              <h1 class="intro__header">
-                skejcik
-              </h1>
+              <img src="img/skate.png" alt="skate" class="intro__image">
               <a href="#" class="btn" data-text="<?= $button; ?>">
                 <?= $button; ?>
               </a>
             </div>
-          </div>
-        </div>
       </section>
       <section class="section">
         <div class="wrapper">
           <div class="content category1">
-            <h1 class="header category1__header">
+          <div class="content__item">
+          <h1>
               <?= $header['section1']; ?>
             </h1>
             <p>
@@ -124,21 +150,45 @@ $contact = $data['contact'];
               <?= $button; ?>
             </a>
           </div>
+          <div class="content__item">
+            <img src="img/pc.png" alt="pc" class="content__itemImage imageSection1">
+          </div>
+
+          </div>
         </div>
       </section>
       <section class="section">
         <div class="wrapper">
           <div class="content category2">
-            <h1 class="header category2__header">
+            <h1>
               <?= $header['section2']; ?>
             </h1>
+            <div class="box">
+            <?php
+            foreach( $box as $key => $val ) :
+          ?>
+              <div class="box__item">
+                <div class="box__itemIcon">
+                  <?= $val['icon'] ?>
+                </div>
+                <div class="box__itemName">
+                  <?= $key ?>
+                </div>
+                <div class="box__itemData">
+                  <?= $val['data'] ?>
+                </div>
+              </div>
+              <?php
+            endforeach;
+          ?>
+          </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="wrapper">
           <div class="content category3">
-            <h1 class="header category3__header">
+            <h1>
               <?= $header['section3']; ?>
             </h1>
           </div>
@@ -147,7 +197,7 @@ $contact = $data['contact'];
       <section class="section">
         <div class="wrapper">
           <div class="content category4">
-            <h1 class="header category4__header">
+            <h1>
               <?= $header['section4']; ?>
             </h1>
           </div>
@@ -156,31 +206,31 @@ $contact = $data['contact'];
       <section class="section">
         <div class="wrapper">
           <div class="content category5">
-            <h1 class="header category5__header">
+            <h1>
               <?= $header['section5']; ?>
             </h1>
           </div>
         </div>
       </section>
     </main>
-    <section class="section">
+    <section class="section section--footer">
       <div class="wrapper">
         <div class="content category6">
-          <h1 class="header category6__header">
+          <h1>
             <?= $header['section6']; ?>
           </h1>
-          <div class="contact">
+          <div class="box">
             <?php
             foreach( $contact as $key => $val ) :
           ?>
-              <div class="contact__item">
-                <div class="contact__itemIcon">
+              <div class="box__item">
+                <div class="box__itemIcon">
                   <?= $val['icon'] ?>
                 </div>
-                <div class="contact__itemName">
+                <div class="box__itemName">
                   <?= $key ?>
                 </div>
-                <div class="contact__itemData">
+                <div class="box__itemData">
                   <?php
                 foreach( $val['data'] as $content => $value ) {
                   echo $value;

@@ -5,15 +5,23 @@ main {
 .section {
   position: relative;
   padding: 90px 0;
+  overflow: hidden;
+  &:first-of-type{
+    overflow: visible;
+  }
   &:last-of-type {
     padding-bottom: 50px;
+  }
+  &:nth-child(2n+1) {
+    background-color: $light2;
   }
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 0 30px;
+  position: relative;
 }
 
 h1,
@@ -45,6 +53,10 @@ h4 {
 
 p {
   font-size: 1.7rem;
+  font-family: 'open_sans';
+  color: $darkenLight;
+  line-height: 30px;
+  margin: 30px 0;
 }
 
 button {
