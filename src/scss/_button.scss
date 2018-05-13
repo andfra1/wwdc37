@@ -14,6 +14,7 @@
   text-transform: uppercase;
   letter-spacing: 0.32px;
   transition: background-color 0.3s;
+  margin-top: 45px;
   &:before {
     content: attr(data-text);
     color: $light;

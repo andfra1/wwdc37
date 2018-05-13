@@ -1,0 +1,48 @@
+.howWeWorks {
+  display: flex;
+  font-size: 0;
+  &__item {
+    //display: inline-block;
+    position: relative;
+    &:first-of-type {
+      display: flex;
+      width: 300px;
+      flex-direction: column;
+      text-align: justify;
+    }
+    &>p {
+      flex: 1;
+    }
+    .diamond {
+      display: flex;
+      position: absolute;
+      width: 1200px;
+      height: 100%;
+      left: 100px;
+      &__item {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: relative;
+        margin-left: 30px;
+        width: 30%;
+        &:before {
+          @include pseudoAbsolute;
+          background-color: red;
+          transform: skew(-30deg);
+          z-index: -1;
+        }
+        &Content {
+          width: 70%;
+          h2 {
+            font-family: 'lato';
+            font-size: 40px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

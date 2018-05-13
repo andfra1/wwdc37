@@ -1,0 +1,73 @@
+.team {
+  &__item {
+    width: 250px;
+    &Box {
+      width: 250px;
+      height: 250px;
+      border: 15px solid #fff;
+      transform: rotate(45deg);
+      position: relative;
+      overflow: hidden;
+      &Img {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &>img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200%;
+          height: auto;
+        }
+      }
+    }
+    &Name {
+      position: relative;
+      color: #ffffff;
+      font-family: "open_sans";
+      z-index: 1;
+      display: inline-block;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+      padding: 10px 25px 14px 25px;
+      &:before {
+        @include pseudoAbsolute;
+        background-color: #252525;
+        z-index: -1;
+        transform: skew(30deg);
+      }
+      &>span {
+        color: #ffffff;
+        font-family: "open_sans";
+        font-size: 24px;
+        font-weight: 700;
+      }
+      &Position {
+        display: inline-block;
+        top: calc(100% - 3px);
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: "open_sans";
+        color: #fff;
+        font-size: 19px;
+        font-style: italic;
+        position: absolute;
+        width: 100%;
+        padding: 4px 15px 8px 15px;
+        z-index: 1;
+        text-align: center;
+        &:before {
+          @include pseudoAbsolute;
+          background-color: #bc2e3a;
+          z-index: -1;
+          transform: skew(30deg);
+        }
+      }
+    }
+  }
+}

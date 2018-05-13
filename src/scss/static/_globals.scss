@@ -5,7 +5,6 @@ main {
 .section {
   position: relative;
   padding: 90px 0;
-  overflow: hidden;
   &:first-of-type{
     overflow: visible;
   }
@@ -15,6 +14,10 @@ main {
   &:nth-child(2n+1) {
     background-color: $light2;
   }
+}
+
+.section--overflowHidden {
+  overflow: hidden;
 }
 
 .wrapper {

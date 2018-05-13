@@ -14,22 +14,19 @@
   }
   .content {
     &__item {
+      display: inline-flex;
+      flex-direction: column;
       position: relative;
-      font-size: 0;
-      display: inline-block;
+      &>p {
+        flex: 1;
+      }
       &:first-of-type {
         max-width: 450px;
         vertical-align: top;
       }
       &:last-of-type {
-        // display: flex;
-        // align-content: center;
-        // justify-content: center;
         max-width: 750px;
         vertical-align: bottom;
-      }
-      &>.btn {
-        margin-top: 80px;
       }
       &Image.imageSection1 {
         width: 757px;
